@@ -1,24 +1,36 @@
 {
-  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "$schema": "http://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "storageAccountName": {
+    "brokerDockerImageReference": {
+      "value": "solace/solace-pubsub-standard:latest"
+    },
+    "dataDiskSize": {
+      "value": "8"
+    },
+    "vmAdminUsername": {
       "value": "GEN-UNIQUE"
     },
-    "adminUsername": {
-      "value": "GEN-UNIQUE"
-    },
-    "adminPassword": {
+    "vmAdminPassword": {
       "value": "GEN-PASSWORD"
     },
-    "dnsLabelForPublicIP": {
+    "solaceAdminPassword": {
+      "value": "admin"
+    },
+    "workspaceName": {
       "value": "GEN-UNIQUE"
     },
-    "solaceVMR_URI": {
-      "value": "http://em.solace.com/DCx500W0IBC00o01dY0V0i0"
+    "workspaceRegion": {
+      "value": "East US"
+    },
+    "numberOfFaultDomains": {
+      "value": 3
+    },
+    "dnsLabelForPublicLoadBalancer": {
+      "value": "GEN-UNIQUE"
     },
     "deploymentModel": {
-      "value": "SingleNode"
+      "value": "HighAvailability"
     }
   }
 }

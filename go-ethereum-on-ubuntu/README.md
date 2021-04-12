@@ -1,11 +1,17 @@
 # Geth Private Node
 
-This Microsoft Azure template deploys a single Ethereum client with a private chain for development and testing.
+![Azure Public Test Date](https://azurequickstartsservice.blob.core.windows.net/badges/go-ethereum-on-ubuntu/PublicLastTestDate.svg)
+![Azure Public Test Result](https://azurequickstartsservice.blob.core.windows.net/badges/go-ethereum-on-ubuntu/PublicDeployment.svg)
 
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fgo-ethereum-on-ubuntu%2Fazuredeploy.json)
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fgo-ethereum-on-ubuntu%2Fazuredeploy.json" target="_blank">
-    <img src="http://armviz.io/visualizebutton.png"/>
-</a>
+![Azure US Gov Last Test Date](https://azurequickstartsservice.blob.core.windows.net/badges/go-ethereum-on-ubuntu/FairfaxLastTestDate.svg)
+![Azure US Gov Last Test Result](https://azurequickstartsservice.blob.core.windows.net/badges/go-ethereum-on-ubuntu/FairfaxDeployment.svg)
+
+![Best Practice Check](https://azurequickstartsservice.blob.core.windows.net/badges/go-ethereum-on-ubuntu/BestPracticeResult.svg)
+![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/go-ethereum-on-ubuntu/CredScanResult.svg)
+
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fgo-ethereum-on-ubuntu%2Fazuredeploy.json)
+[![Deploy To Azure US Gov](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.svg?sanitize=true)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fgo-ethereum-on-ubuntu%2Fazuredeploy.json)
+[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fgo-ethereum-on-ubuntu%2Fazuredeploy.json)
 
 Once your deployment is complete you will have a sandbox environment with:
 
@@ -16,7 +22,6 @@ Once your deployment is complete you will have a sandbox environment with:
 3. A script to activate your private blockchain and begin interacting with the Ethereum protocol.
 
 ** Note this private key is exposed on a public GitHub repository. It should _never_ be used on a public network. If you use this key for anything besides sandbox testing purposes, your funds will be lost!
-
 
 ![Ethereum-Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/go-ethereum-on-ubuntu/images/eth.jpg)
 
@@ -137,7 +142,6 @@ personal.unlockAccount(personal.listAccounts[0])
 var guestBook = contract.new(initializer, callback);
 ```
 
-
 Congratulations - you have a contract deployed to the Ethereum network!
 
 ...except for one little detail.
@@ -228,3 +232,5 @@ Now if we read from the contract:
 ```
 
 Congratulations! Your first contract is alive and well on your private Ethereum blockchain.
+
+

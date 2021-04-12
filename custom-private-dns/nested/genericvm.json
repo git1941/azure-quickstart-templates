@@ -1,17 +1,11 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
     "subnetId": {
       "type": "string",
       "metadata": {
         "description": "Reference to the subnet to put the VM's NIC in"
-      }
-    },
-    "storageId": {
-      "type": "string",
-      "metadata": {
-        "description": "Reference to the storage account for the VM disk"
       }
     },
     "vmName": {
@@ -91,7 +85,7 @@
     {
       "name": "[parameters('vmName')]",
       "type": "Microsoft.Compute/virtualMachines",
-      "apiVersion": "2016-08-30",
+      "apiVersion":"2017-03-30",
       "location": "[parameters('location')]",
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkInterfaces',variables('nicName'))]"
@@ -113,10 +107,7 @@
             "version": "latest"
           },
           "osDisk": {
-            "name": "osdisk",
-            "vhd": {
-              "uri": "[concat(reference(parameters('storageId'), '2016-12-01').primaryEndpoints.blob,'vhdsclient/', parameters('vmName'), '.vhd')]"
-            },
+            "name": "[concat(parameters('vmName'),'_OSDisk')]",
             "caching": "ReadWrite",
             "createOption": "FromImage"
           }
